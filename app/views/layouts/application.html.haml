@@ -1,0 +1,23 @@
+!!!
+%html
+  %head
+    %title TwLibrary
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    .container
+      .navbar
+        .navbar-inner
+          %a.brand{:href => "#"} Library
+          %ul.nav
+            %li.active
+              %a{:href => "#"} Home
+            %li
+              %a{:href => new_book_path} New
+            %li
+              %a{:href => "#"} Link
+      .container.main-container
+        = yield
+
+      = yield :javascript
