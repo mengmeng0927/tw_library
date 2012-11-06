@@ -14,10 +14,5 @@
 //= require jquery_ujs
 //= require underscore.js
 //= require backbone.js
-//= require book/bookapp.js
-//= require book/book.js
-//= require book/index.js
-//= require book/books.js
-
-//= require_directory .
 //= require_tree .
+

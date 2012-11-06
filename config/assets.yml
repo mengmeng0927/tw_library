@@ -1,5 +1,8 @@
 embed_assets: on
 
-
 javascripts:
-	- public/application.js
+  book:
+    - public/javascripts/application.js
+    - public/javascripts/models/book.js
+    - public/javascripts/views/index.js
+    - public/javascripts/controllers/books.js

@@ -37,11 +37,12 @@ App.router.Books = Backbone.Router.extend({
 
 });
 
-var App = {
-    Views: {},
-    Controllers: {},
-    init: function() {
-        new App.router.Books();
-        Backbone.history.start();
-    }
-};
+ // init: function() {
+ //        new App.router.Books();
+ //        Backbone.history.start();
+ //    }
+
+$(function () {
+    new App.router.Books();
+    Backbone.history.start();
+  });
