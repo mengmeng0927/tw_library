@@ -1,0 +1,22 @@
+%h2 Add a New Book
+%form.form-horizontal{method: 'POST'}
+	.control-group
+		%label.control-label{for: 'title'} Title
+		.controls
+			%input#title.input-xlarge{type: 'text', placeholder: 'Book Name'}
+	.control-group
+		%label.control-label{for: 'author'} Author
+		.controls
+			%input#author.input-xlarge{type: 'text'}
+	.control-group
+		%label.control-label{for: 'publisher'} Publisher
+		.controls
+			%input#publisher.input-xlarge{type: 'text'}
+	.control-group
+		%label.control-label{for: 'description'} Description
+		.controls
+			%textarea#description.span6{rows: '4'}
+
+	.form-actions
+      %button.btn.btn-primary{type: 'submit'} Save
+      %button.btn{type: 'reset'} Cancel

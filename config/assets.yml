@@ -4,5 +4,8 @@ javascripts:
   book:
     - public/javascripts/application.js
     - public/javascripts/models/book.js
-    - public/javascripts/views/index.js
-    - public/javascripts/controllers/books.js
+    - public/javascripts/models/books.js
+    - public/javascripts/views/index_view.js
+    - public/javascripts/views/new_view.js
+    - public/javascripts/routers/books.js
+

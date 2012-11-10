@@ -1,4 +1,4 @@
-var Book = Backbone.Model.extend({
+App.models.Book = Backbone.Model.extend({
 	url: function () {
 		var base = 'books';
 		if (this.isNew()) return base;

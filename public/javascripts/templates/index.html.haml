@@ -1,0 +1,16 @@
+%h2 Books
+
+%table.table.table-striped.table-bordered.table-hover
+  %tr
+    %th Title
+    %th Author
+    %th Publisher
+    %th Description
+
+  - books.each(function (book) {
+    %tr
+      %td= book.get('title')
+      %td= book.get('author')
+      %td= book.get('publisher')
+      %td= book.get('description')
+  - })
