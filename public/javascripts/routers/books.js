@@ -30,11 +30,8 @@ App.router.Books = Backbone.Router.extend({
 	},
 
 	newBook: function () {
-		new App.models.Book().fetch({
-			success: function(book) {
-				new App.Views.NewView({ model: new App.models.Book()});
-			}
-		});
+		var self = this;
+		new App.Views.NewView({ model: new App.models.Book() });
 	}
 
 });

@@ -1,14 +1,10 @@
 class BooksController < ApplicationController
+  respond_to :json
   # GET /books
   # GET /books.json
   def index
-    # @books = Book.all
-
-    # respond_to do |format|
-    #   format.html # index.html.erb
-    #   format.json { render json: @books }
-    # end
     render :json => Book.all
+    # respond_with Book.all
   end
 
   # GET /books/1
@@ -25,12 +21,7 @@ class BooksController < ApplicationController
   # GET /books/new
   # GET /books/new.json
   def new
-    @book = Book.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @book }
-    end
+    respond_with Book.new
   end
 
   # GET /books/1/edit
@@ -41,17 +32,7 @@ class BooksController < ApplicationController
   # POST /books
   # POST /books.json
   def create
-    @book = Book.new(params[:book])
-
-    respond_to do |format|
-      if @book.save
-        format.html { redirect_to @book, notice: 'Book was successfully created.' }
-        format.json { render json: @book, status: :created, location: @book }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @book.errors, status: :unprocessable_entity }
-      end
-    end
+    respond_with Book.create(params[:book])
   end
 
   # PUT /books/1
