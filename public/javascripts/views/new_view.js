@@ -19,6 +19,7 @@ App.Views.NewView = Backbone.View.extend({
 		e.preventDefault();
 		this.model.save(null, {
 			success: function () {
+				App.app.navigate('!/index', {trigger: true});
 			}
 		});
 	},

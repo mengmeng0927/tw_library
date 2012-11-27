@@ -3,7 +3,7 @@ App.config.templates = ['index', 'new'],
 App.router.Books = Backbone.Router.extend({
 	routes: {
 		// "books/:id": "edit",
-		"": "index",
+		"!/index": "index",
 		"!/new": "newBook"
 	},
 
@@ -38,7 +38,7 @@ App.router.Books = Backbone.Router.extend({
 
 $(function () {
 	App.helper.loadTemplates(function () {
-		new App.router.Books();
+		App.app = new App.router.Books();
     Backbone.history.start();
 	});
 });
